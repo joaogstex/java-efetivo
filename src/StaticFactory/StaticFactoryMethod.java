@@ -1,3 +1,4 @@
+package StaticFactory;
 import java.time.LocalTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,4 +37,15 @@ public class StaticFactoryMethod {
         return "" + getName();
     }
 
+}
+
+class RunApp {
+    public static void main(String[] args) throws Exception {
+        //Static Factory Method
+        StaticFactoryMethod name = StaticFactoryMethod.createName("João Gustavo");
+        StaticFactoryMethod logger = StaticFactoryMethod.createLoggingMethod("João Gustavoooo");
+        name.setName("Douglas");
+        System.out.println(name);
+        System.out.println(logger);
+    }
 }
